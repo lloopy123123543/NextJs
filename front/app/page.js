@@ -65,12 +65,12 @@ export default function Home() {
         {CARDS.map((card) => (
           <div className="m-10" key={card.id}>
           
-          <img src={card.img1}></img>
-          <div className="flex gap-8 m-5 w-3/4">
-        <img className="w-12 h-12 " src={card.img2}></img>
+          <img className="w-full h-60 hidden sm:block" src={card.img1}></img>
+          <div className="flex gap-8 m-5 ">
+        <img className="w-12 h-12 mt-5 " src={card.img2}></img>
             <div>
             <div className="text-Main font-bold text-3xl">{card.title}</div>
-            <div>{card.subtitle}</div>
+            <div className="mt-3">{card.subtitle}</div>
             </div>
           </div>
           </div>
