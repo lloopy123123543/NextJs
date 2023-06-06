@@ -76,6 +76,21 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <div className="w-full mx-auto bg-slate-700 sm:bg-gradient-to-r sm:from-slate-700 from-50% sm:to-Main to-50% p-10 ">
+        <div className="container w-full mx-auto grid grid-cols-1 sm:grid-cols-2 sm:space-x-10 space-y-10">
+        <div className="w-full sm:p-0 sm:pr-10 flex flex-col gap-5 sm:bg-none  ">
+          <div className="text-Main">свяжитесь с нами</div>
+          <div className="text-xl sm:text-3xl text-white font-bold">Вы можете задать вопросы нажав на кнопку "Связаться"</div>
+          <div className=" text-white">Мы вам расскажем подробнее о нашей компании, о наших преимуществах и почему вы должны работать именно с нами</div>
+          <div><button className="px-5 py-3 bg-Main text-black font-semibold text-sm">Связаться</button></div>
+        </div>
+        <div className="text-Main bg-none sm:text-black sm:bg-Main">
+          <div className=" text-sm sm:text-xl sm:p-0          ">Наша компания славится своими классынми пельменями, только пельмени могут сделать что то на столько хорошее, чтобы ты сошел сума от их вкуса, я очень люблю хорошо покушать, ведь это самое главное в этом деле</div>
+
+        </div>
+        </div>
+
+      </div>
     </div>
   );
 }
