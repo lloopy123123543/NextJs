@@ -1,6 +1,7 @@
 
 import CARDS from "./constants/const_cards.js";
 import Image from "next/image.js";
+import Сalculator from "./calculator.js"
 export default function Home() {
   return (
     <div>
@@ -66,9 +67,9 @@ export default function Home() {
           <div className="m-10" key={card.id}>
           
           <img className="w-full h-60 hidden sm:block" src={card.img1}></img>
-          <div className="flex gap-8 m-5 ">
-        <img className="w-12 h-12 mt-5 " src={card.img2}></img>
-            <div>
+          <div className="grid grid-cols-1 space-y-10 sm:space-y-0 sm:grid-cols-4 pt-4">
+            <div className="h-full flex justify-center items-center"><img className="w-20 h-20" src={card.img2}></img></div>
+            <div className="col-span-3 text-center sm:text-start">
             <div className="text-Main font-bold text-3xl">{card.title}</div>
             <div className="mt-3">{card.subtitle}</div>
             </div>
@@ -91,6 +92,7 @@ export default function Home() {
         </div>
 
       </div>
+      <Сalculator></Сalculator>
     </div>
   );
 }
