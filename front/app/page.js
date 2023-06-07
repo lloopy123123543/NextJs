@@ -5,62 +5,59 @@ import Сalculator from "./calculator.js"
 export default function Home() {
   return (
     <div>
-      <div className="container mx-auto">
-        <div className="w-full bg-slate-600 p-10 space-y-3">
-          <div className="text-Main text-xl flex items-center ">lineSubtitle</div>
-          <div className="text-white text-8xl font-bold">TITLE</div>
-          <div className="text-white lg:w-1/2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
-            error ipsum quas dolorum est minima, praesentium omnis cupiditate
-            pariatur rerum.
+      <div className=" w-full text-center sm:text-left mx-auto bg-slate-600">
+        <div className="w-full lg:container lg:mx-auto bg-slate-600 p-10 space-y-5">
+          <div className="text-Main text-xl flex items-center ">ОАО</div>
+          <div className="text-white text-8xl font-bold">PRO</div>
+          <div className="text-white lg:w-2/3">
+          Установка окон - это сложный процесс, который требует опыта и профессионализма. Наша компания поможет вам в вашем деле. Мы входим в топ разработчиков и установщиков окон в России.
           </div>
           <button className="px-10 py-2 bg-Main">Смотреть</button>
         </div>
       </div>
-      <div className="container mx-auto flex justify-center">
+      <div className="w-full sm:container mx-auto flex justify-center">
         <div className="w-5/6 bg-white grid grid-cols-1 lg:grid-cols-3 shadow-md  mt--1">
-          <div className="bg-Main p-10 space-y-2">
-            <div className="text-gray-500 font-mono">BigTitle</div>
-            <div className="text-3xl font-bold ">Title</div>
-            <div className="">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
-              ipsum laudantium eius rem temporibus, quia quisquam, obcaecati{" "}
+          <div className="w-full bg-Main p-10 space-y-2">
+            <div className="text-gray-500 font-mono">Ознакомтесь</div>
+            <div className="text-3xl font-bold ">Стоимость</div>
+            <div className="py-3">
+              Наши цены ниже чем у конкурентов, при этом качество остается тем же. Перейдите по кнопке "Ознакомиться" чтобы увидеть стоимость наших услуг
             </div>
-            <button className="bg-gray-600 text-white px-5 py-2">WorkFlow</button>
+            <button className="bg-gray-600 text-white px-5 py-2">Ознакомиться</button>
           </div>
-          <div>
+          <div className="text-center">
             <div className="flex justify-center items-center h-1/2 p-10 min-h-16 md:border-0 md:border-r-2 md:border-b-2">
               <div>
-                <div className="text-5xl font-bold">Title</div>
-                <div className="text-gray-500">Subtitle</div>
+                <div className="text-3xl font-bold">Замеры</div>
+                <div className="text-gray-500">Мы производим замеры</div>
               </div>
             </div>
             <div className="flex justify-center items-center h-1/2 p-10  min-h-16 md:border-r-2">
               <div>
-                <div className="text-5xl font-bold">Title</div>
-                <div className="text-gray-500">Subtitle</div>
+                <div className="text-3xl font-bold">Согласование</div>
+                <div className="text-gray-500">Мы согласуем желания клиента и цену проекта</div>
               </div>
             </div>
           </div>
-          <div>
+          <div className="text-center">
             <div className="flex justify-center items-center h-1/2 p-10   min-h-16 md:border-b-2">
               <div>
-                <div className="text-5xl font-bold">Title</div>
-                <div className="text-gray-500">Subtitle</div>
+                <div className="text-3xl font-bold">Проектирование</div>
+                <div className="text-gray-500">Проектирование проекта</div>
               </div>
             </div>
             <div className="flex justify-center items-center h-1/2 p-10  min-h-16">
               <div>
-                <div className="text-5xl font-bold">Title</div>
-                <div className="text-gray-500">Subtitle</div>law
+                <div className="text-3xl font-bold">Реализация</div>
+                <div className="text-gray-500">Реализация проекта в кратчайшие срокие</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto my-10 grid grid-cols-1">
-        <div className="text-Main text-center ">Sub Title</div>
-        <div className="text-5xl font-bold pt-4 text-center ">Title</div>
+      <div className="container mx-auto mt-16 grid grid-cols-1">
+        <div className="text-Main text-center ">Подробнее</div>
+        <div className="text-5xl font-bold pt-4 text-center ">О НАС</div>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {CARDS.map((card) => (

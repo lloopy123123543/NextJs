@@ -10,7 +10,7 @@ const CARDS = [
       id:2,
       img1: 'https://img.freepik.com/premium-photo/rear-view-civil-engineers-specialists-checking-plan-construction-site-industry-engineer-construction-concept_35674-16659.jpg?w=2000',
       img2: './images/window.png',
-      title: 'Опытные специалисты',
+      title: 'Специалисты',
       subtitle: 'В нашей компании работают только высококвалифицированные специалисты.'
     },
     {
@@ -38,7 +38,7 @@ const CARDS = [
       id:6,
       img1: 'https://wallpaperaccess.com/full/1447056.jpg',
       img2: './images/feedback.png',
-      title: 'Лучшие отзывы на рынке',
+      title: 'Отзывы на рынке',
       subtitle: 'Вы можете удостовериться в качестве наших услуг в отзывах на нашем сайте или соцсетях.'
     }
   ]
