@@ -123,29 +123,7 @@ function Calculator() {
             </div>
           </div>
         </div>
-        <div className="mt-5 p-4 bg-slate-100">
-          <div className="pb-3 text-xl font-semibold ">Тип окна</div>
-          <div className="w-full flex items-center justify-between">
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   );
