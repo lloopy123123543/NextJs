@@ -21,12 +21,6 @@ function Calculator() {
             <div className="w-14 h-14">
               <img src="./images/window.png"></img>
             </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
-            <div className="w-14 h-14">
-              <img src="./images/window.png"></img>
-            </div>
           </div>
         </div>
         <div className="mt-5 p-4 bg-slate-100">
@@ -98,16 +92,11 @@ function Calculator() {
             </div>
             <div>
               <div className="block mb-2 text-sm font-medium text-gray-900">
-                Ширина, мм
+                Высота, мм
               </div>
               <input className="p-2 border border-black w-full"></input>
             </div>
-            <div>
-              <div className="block mb-2 text-sm font-medium text-gray-900">
-              Высота, мм
-              </div>
-              <input className="p-2 border border-black w-full"></input>
-            </div>
+
             <div>
               <div className="block mb-2 text-sm font-medium text-gray-900">
               Стеклопакет
