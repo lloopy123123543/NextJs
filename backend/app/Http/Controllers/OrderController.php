@@ -51,14 +51,8 @@ class OrderController extends BaseController
 
     public function order_add(Request $request)
     {
-        $bearer = $request->header("authorization");
-        $token = explode(" ", $bearer)[1];
-        $user = User::all()->where('token', $token)->first();
 
-        if ($bearer != ' ') {
-            $token = explode(" ", $bearer)[1];
-            $user = User::all()->where('token', $token)->first();
-            if ($user != null) {
+
                 $validator = Validator::make($request->all(), [
                     "stvorka1" => "required",
                     "stvorka2" => "required",
@@ -83,11 +77,5 @@ class OrderController extends BaseController
                 $order->cost = $request->input('cost');
                 $order->save();
                 return response()->json('added');
-            } else {
-                return response()->json(['error' => 'user not found']);
             }
-        } else {
-            return response()->json(['error' => 'token is empty']);
-        }
-    }
 }

@@ -12,6 +12,39 @@ function Calculator() {
   const [summ, setSumm] = useState(0)
   let inputCallBack = useRef();
 
+
+
+  function SendCalculate(){
+    calculate()
+    
+    let FormData = {
+      stvorka1: s_stvorka1.current.value,
+      stvorka2: s_stvorka2.current.value,
+      stvorka3: s_stvorka3.current.value,
+      height: height.current.value,
+      weight: width.current.value,
+      steklopacket: s_camera.current.value,
+      callback: inputCallBack.current.value,
+      cost: summ        
+
+    }
+    fetch('http://localhost:8000/api/orders/add',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(FormData)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('Failed: ' + error.message));
+
+
+
+    
+
+  }
+
   function typeCheck(e) {
     let window = document.getElementById("window")
 
@@ -51,29 +84,6 @@ function Calculator() {
     //   console.log("sus")
     //   typeCheck()
     // }
-  }
-
-  function SendCalculate(){
-    fetch('http://localhost:8000/api/orders/add',{
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: {
-        stvorka1: s_stvorka1.current.value,
-        stvorka2: s_stvorka2.current.value,
-        stvorka3: s_stvorka3.current.value,
-        height: height.current.value,
-        weight: width.current.value,
-        steklopacket: s_camera.current.value,
-        callback: inputCallBack.current.value,
-        cost: summ        
-
-      }
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));
-
   }
 
   function calculate(){
