@@ -36,7 +36,10 @@ function Calculator() {
       body: JSON.stringify(FormData)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data)
+      alert("отправлено")
+    })
     .catch(error => console.log('Failed: ' + error.message));
 
 
@@ -88,14 +91,6 @@ function Calculator() {
 
   function calculate(){
 
-    console.log(s_stvorka1.current.value)
-    console.log(s_stvorka2.current.value)
-    console.log(s_stvorka3.current.value)
-    console.log(height.current.value)
-    console.log( width.current.value)
-    console.log(s_camera.current.value)
-    console.log(inputCallBack.current.value)
-    console.log(summ)  
 
     let calculate_stvorka1 = 400;
     let calculate_stvorka2 = 400;
