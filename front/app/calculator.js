@@ -10,6 +10,7 @@ function Calculator() {
   let height = useRef();
   let width = useRef();
   const [summ, setSumm] = useState(0)
+  let inputCallBack = useRef();
 
   function typeCheck(e) {
     let window = document.getElementById("window")
@@ -53,18 +54,20 @@ function Calculator() {
   }
 
   function SendCalculate(){
-    fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits',{
+    fetch('http://localhost:8000/api/orders/add',{
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8'
+        'Content-Type': 'application/json',
       },
       body: {
-        stvorka1: s_stvorka1.current,
-        stvorka2: s_stvorka2.current,
-        stvorka3: s_stvorka3.current,
-        height: height.current,
-        weight: width.current,
-        steklopacket: s_camera.current,
+        stvorka1: s_stvorka1.current.value,
+        stvorka2: s_stvorka2.current.value,
+        stvorka3: s_stvorka3.current.value,
+        height: height.current.value,
+        weight: width.current.value,
+        steklopacket: s_camera.current.value,
+        callback: inputCallBack.current.value,
+        cost: summ        
 
       }
     })
@@ -74,6 +77,15 @@ function Calculator() {
   }
 
   function calculate(){
+
+    console.log(s_stvorka1.current.value)
+    console.log(s_stvorka2.current.value)
+    console.log(s_stvorka3.current.value)
+    console.log(height.current.value)
+    console.log( width.current.value)
+    console.log(s_camera.current.value)
+    console.log(inputCallBack.current.value)
+    console.log(summ)  
 
     let calculate_stvorka1 = 400;
     let calculate_stvorka2 = 400;
@@ -282,7 +294,13 @@ function Calculator() {
         <div>{summ} рублей</div>
        <div>
        <button type="button" onClick={calculate} class="text-white bg-Main hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900">Посчитать</button>
-       <button type="button" onClick={SendCalculate} class="text-white bg-Main hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900">Заказать</button>
+       <div className="grid grid-cols-1 space-y-2">
+        <div className="grid grid-cols-1">
+          <label>Номер телефона или почта для обратной связи</label>
+          <input ref={inputCallBack} placeholder="Номер телефона или почта" className="border border-Main rounded px-1 py-1 w-3/4"></input>
+        </div>
+        <button type="button" onClick={SendCalculate} class="text-white bg-Main hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900">Заказать</button>
+        </div>
        </div>
       </div>
       
