@@ -2,6 +2,7 @@
 import CARDS from "./constants/const_cards.js";
 import Image from "next/image.js";
 import Сalculator from "./calculator.js"
+import Reviews from "./reviews.js"
 export default function Home() {
   return (
     <div>
@@ -90,6 +91,7 @@ export default function Home() {
 
       </div>
       <Сalculator></Сalculator>
+      <Reviews></Reviews>
     </div>
   );
 }

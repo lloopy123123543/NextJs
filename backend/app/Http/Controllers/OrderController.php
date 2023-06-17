@@ -51,8 +51,6 @@ class OrderController extends BaseController
 
     public function order_add(Request $request)
     {
-
-
                 $validator = Validator::make($request->all(), [
                     "stvorka1" => "required",
                     "stvorka2" => "required",
