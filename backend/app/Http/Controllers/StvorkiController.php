@@ -16,11 +16,9 @@ class StvorkiController extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function add_stvorku(Request $request){
-
         $bearer = $request -> header("authorization");
         $token = explode(" ", $bearer)[1];
         $user = User::all() -> where('token', $token) -> first();
-
         if($bearer != ' '){
             $token = explode(" ", $bearer)[1];
             $user = User::all() -> where('token', $token) -> first();
@@ -39,7 +37,5 @@ class StvorkiController extends BaseController
                 }else{return response() -> json(['error' => "forbidden"]);}
             }else{return response()-> json(['error'=>'user not found']);}
         }else{return response()-> json(['error' => 'token is empty']);}
-
-
     }
 }

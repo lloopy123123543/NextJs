@@ -28,7 +28,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::prefix("users") -> group( function () {
     Route::post("login", [UserController::class, "login"]);
     Route::post("register", [UserController::class, "registration"]);
-
 });
 
 // Роуты створок
@@ -39,7 +38,7 @@ Route::prefix("stvorks") -> group( function () {
 Route::prefix("steklopackets") -> group( function () {
     Route::post("add", [SteklopacketController::class, "add_steklopacket"]);
 });
-// Роуты комментариев
+// Роуты отзывов
 Route::prefix("reviews") -> group( function () {
     Route::post("add", [ReviewsController::class, "add_review"]);
     Route::post("show", [ReviewsController::class, "show_reviews"]);
