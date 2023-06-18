@@ -48,5 +48,6 @@ Route::prefix("reviews") -> group( function () {
 // Роуты заказов
 Route::prefix("orders") -> group( function () {
     Route::post("add", [OrderController::class, "order_add"]);
+    Route::delete("delete/{id}", [OrderController::class, "order_delete"]);
     Route::post("check", [OrderController::class, "order_show"]);
 });

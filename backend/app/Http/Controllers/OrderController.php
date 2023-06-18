@@ -48,7 +48,27 @@ class OrderController extends BaseController
             return response()->json(['error' => 'token is empty']);
         }
     }
+    public function order_delete(Request $request, $id){
+        $bearer = $request -> header("authorization");
+        $token = explode(" ", $bearer)[1];
+        $user = User::all()->where('token', $token)->first();
+        if ($bearer != ' ') {
+            $token = explode(" ", $bearer)[1];
+            $user = User::all()->where('token', $token)->first();
+            if ($user != null) {
+                if($user -> login == "admin"){
+                    $order = order::find($id);
+                    // $order -> delete();
+                    return response() -> json($order);
 
+                }else{return response()->json(['error' => 'forbidden for you']);}
+            } else {
+                return response()->json(['error' => 'user not found']);
+            }
+        } else {
+            return response()->json(['error' => 'token is empty']);
+        }
+    }
     public function order_add(Request $request)
     {
                 $validator = Validator::make($request->all(), [

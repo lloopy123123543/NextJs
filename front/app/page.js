@@ -6,6 +6,7 @@ import Footer from "./Footer.js"
 import Reviews from "./reviews.js"
 export default function Home() {
   return (
+  
     <div>
       
       <div className=" w-full text-center sm:text-left mx-auto bg-slate-600">
