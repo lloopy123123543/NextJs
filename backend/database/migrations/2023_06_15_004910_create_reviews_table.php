@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('author') -> constrained('users');
+            $table->string('author');
             $table->string('text');
             $table->timestamps();
         });

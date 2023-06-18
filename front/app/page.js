@@ -2,10 +2,12 @@
 import CARDS from "./constants/const_cards.js";
 import Image from "next/image.js";
 import Сalculator from "./calculator.js"
+import Footer from "./Footer.js"
 import Reviews from "./reviews.js"
 export default function Home() {
   return (
     <div>
+      
       <div className=" w-full text-center sm:text-left mx-auto bg-slate-600">
         <div className="w-full lg:container lg:mx-auto bg-slate-600 p-10 space-y-5">
           <div className="text-Main text-xl flex items-center ">ОАО</div>
@@ -92,6 +94,7 @@ export default function Home() {
       </div>
       <Сalculator></Сalculator>
       <Reviews></Reviews>
+      <Footer></Footer>
     </div>
   );
 }
