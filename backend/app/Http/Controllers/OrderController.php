@@ -58,7 +58,7 @@ class OrderController extends BaseController
             if ($user != null) {
                 if($user -> login == "admin"){
                     $order = order::find($id);
-                    // $order -> delete();
+                    $order -> delete();
                     return response() -> json($order);
 
                 }else{return response()->json(['error' => 'forbidden for you']);}
