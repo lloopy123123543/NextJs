@@ -115,7 +115,6 @@ function Calculator() {
       setSumm(Math.round((calculate_stvorka1 + calculate_stvorka2 + calculate_stvorka3 + sizes) * calculate_camera));
     }
   }
-
   return (
     
     <div className="container mx-auto w-full grid grid-cols-1 md:grid-cols-2">
@@ -232,7 +231,8 @@ function Calculator() {
                 onInput={selectorCheck}
                 ref={s_stvorka2}
                 id="stvorka2"
-                class="mt=10 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="mt=10
+                 bg-gray-50 border border-gray-300 text-gray-900 text-sm  focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option value="1">Нет</option>
                 <option value="2">Поворотное</option>
@@ -296,7 +296,7 @@ function Calculator() {
             </div>
           </div>
         </div>
-        <div>{summ} рублей</div>
+        <div>Примерная стоимость: {summ} рублей</div>
        <div>
        <button type="button" onClick={calculate} class="text-white bg-Main hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900">Посчитать</button>
        <div className="grid grid-cols-1 space-y-2">
