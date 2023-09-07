@@ -2,7 +2,7 @@
 import React, { Component, useRef, useState, useEffect } from "react";
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
 
   let login_in = useRef();
   let password_in = useRef();
@@ -72,4 +72,4 @@ const page = () => {
   );
 }
 
-export default page;
+export default Page;

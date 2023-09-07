@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 
-const page = () => {
+const Page = () => {
     const [Order, setOrder] = useState([])
     
 
@@ -66,4 +66,4 @@ const page = () => {
 
 }
 
-export default page;
+export default Page;
