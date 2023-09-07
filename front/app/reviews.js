@@ -34,7 +34,7 @@ useEffect(() => {
         <div className="text-5xl font-bold pt-4 text-center ">Отзывы</div>
       </div>
             <div className="container mx-auto p-12 grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 gap-20">
-             {!Review ?  Review.map(rev => <div key={rev.id}>
+             {!!Review ?  Review.map(rev => <div key={rev.id}>
                 <div className="bg-white h-full flex flex-col text-center items-center justify-center border rounded border-Main p-4 duration-500 shadow-[5px_5px_0px_0px_rgb(288,188,68)] hover:shadow-[-5px_5px_0px_0px_rgb(288,188,68)]">
                     <div className="text-xl font-bold ">{rev.author}</div>
                     <div className="text-sm mt-3 text-slate-800">{rev.text}</div>

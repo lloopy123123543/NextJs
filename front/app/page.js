@@ -84,10 +84,10 @@ export default function Home() {
           <div className="text-Main">свяжитесь с нами</div>
           <div className="text-xl sm:text-3xl text-white font-bold">Вы можете задать вопросы нажав на кнопку "Связаться"</div>
           <div className=" text-white">Мы вам расскажем подробнее о нашей компании, о наших преимуществах и почему вы должны работать именно с нами</div>
-          <div><button className="px-5 py-3 bg-Main text-black font-semibold text-sm">Связаться</button></div>
+          <div><button href="https://github.com/lloopy123123543" className="px-5 py-3 bg-Main text-black font-semibold text-sm">Связаться</button></div>
         </div>
         <div className="text-Main bg-none sm:text-black sm:bg-Main">
-          <div className=" text-sm sm:text-xl sm:p-0          ">Наша компания славится своими классынми пельменями, только пельмени могут сделать что то на столько хорошее, чтобы ты сошел сума от их вкуса, я очень люблю хорошо покушать, ведь это самое главное в этом деле</div>
+          <div className=" text-sm sm:text-xl sm:p-0          ">Мы являемся одними из лучших производителей и установщиков окон в данной сфере благодаря использованию только высококачественных материалов, широкому выбору оконных конструкций, быстрой и качественной установке, доступным ценам, и высокому качеству работы, которое гарантирует долгосрочные отношения с нашими клиентами.</div>
 
         </div>
         </div>

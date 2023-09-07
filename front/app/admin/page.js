@@ -49,7 +49,7 @@ const page = () => {
 
     return(
         <div className="container mt-10 w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-10">
-            {!Order && Order.map((order, index) => <div key={index} id={order.id} className="bg-Main h-auto min-w-320 flex-wrap rounded-lg p-8 duration-300">
+            {!!Order && Array.isArray(Order) && Order.map((order, index) => <div key={index} id={order.id} className="bg-Main h-auto min-w-320 flex-wrap rounded-lg p-8 duration-300">
            <div className="text-xl font-bold">№{order.id}</div>
                 <div className="flex gap-1">Створка 1: <p className="font-bold">{order.stvorka1}</p></div>
                 <div className="flex gap-1">Створка 2: <p className="font-bold">{order.stvorka2}</p></div>
